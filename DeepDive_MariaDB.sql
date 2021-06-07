@@ -63,7 +63,7 @@ CREATE TABLE `Boss_Skills` (
     `createdAt` datetime(6) NOT NULL DEFAULT current_timestamp(6),
     `updatedAt` datetime(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6),
     PRIMARY KEY (`id`),
-    FOREIGN KEY (`bossId`) REFERENCES `Boss` ('id'),
+    FOREIGN KEY (`bossId`) REFERENCES `Boss` (`id`),
     FOREIGN KEY (`skillId`) REFERENCES `Skill` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
